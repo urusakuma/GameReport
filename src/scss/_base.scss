@@ -1,0 +1,33 @@
+$topHeight: 5%;
+body {
+  width: 95vw;
+  height: 97vh;
+  margin: 0vh 2vw;
+  background-color: whitesmoke;
+}
+
+.top {
+  height: $topHeight;
+  min-height: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sub {
+  float: left;
+  height: calc(100% - #{$topHeight});
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.main {
+  float: right;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: calc(100% - #{$topHeight});
+  width: calc(80% - #{$divline});
+  box-sizing: border-box;
+}

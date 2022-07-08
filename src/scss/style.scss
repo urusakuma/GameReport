@@ -1,0 +1,140 @@
+@import "layout";
+@import "base";
+@import "modals";
+$divline: 0.5em;
+$itemH: 2.25em;
+#gameDataName {
+  height: 100%;
+  font-size: large;
+  text-align: center;
+  word-break: break-all;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.scroll {
+  margin: 0%;
+  height: 80%;
+  padding-left: 0%;
+  overflow: clip scroll;
+  resize: none;
+  position: relative;
+  box-sizing: border-box;
+}
+#reportsList {
+  padding-left: 1em;
+  height: 85%;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  position: absolute;
+}
+#reportsList > li {
+  height: $itemH;
+  width: 100%;
+  font-weight: normal;
+  line-height: $itemH;
+  word-break: keep-all;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+#reportsList > li:nth-child(odd) {
+  background-color: whitesmoke;
+}
+#reportsList > li:nth-child(even) {
+  background-color: rgb(235, 235, 235);
+}
+#reportsList > li > span {
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 90%;
+  box-sizing: border-box;
+}
+.stickybottom {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+.stickybottom > a.button {
+  position: absolute;
+  bottom: 5%;
+  pointer-events: auto;
+}
+.saveControlButtons {
+  height: 20%;
+}
+#reportTitle {
+  box-sizing: border-box;
+  height: $itemH;
+  width: calc(99% - #{$itemH});
+
+  @include roundOffCorners;
+}
+#report {
+  flex-grow: 1;
+  overflow: clip scroll;
+  resize: none;
+  width: 100%;
+  margin-top: $divline;
+  box-sizing: border-box;
+  @include roundOffCorners;
+}
+#unit {
+  height: $itemH;
+  width: 30%;
+  box-sizing: border-box;
+}
+#amountInUnit {
+  height: $itemH;
+  width: 60%;
+  vertical-align: middle;
+  margin-left: 8%;
+  box-sizing: border-box;
+}
+#unitsOfDayList {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#unitsOfDayList li {
+  width: 40%;
+  margin: 0%;
+  padding: 0%;
+}
+#importInputScreen textarea {
+  resize: none;
+  width: 100%;
+  height: 10em;
+}
+#exportOutputScreen textarea {
+  resize: none;
+  width: 100%;
+  height: 10em;
+}
+.sideBySide {
+  margin-top: $divline;
+  width: 100%;
+  height: calc(#{$itemH} + 23px);
+  display: flex;
+  flex-grow: 1;
+  justify-content: start;
+  box-sizing: border-box;
+}
+a.button {
+  @include layoutButton;
+}
+a.button:hover {
+  @include layoutButtonHover;
+}
+button.button {
+  @include layoutButton;
+}
+button.button:hover {
+  @include layoutButtonHover;
+}

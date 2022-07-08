@@ -1,0 +1,62 @@
+#unitsOfDayList {
+  display: flex;
+  align-items: center;
+}
+
+.overlays {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlays .cancel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.overlays:target {
+  visibility: visible;
+  opacity: 1;
+}
+.modals {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 400px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  @include roundOffCorners;
+}
+.modals > h2 {
+  margin: 0%;
+}
+.modals > h3 {
+  margin: 0%;
+}
+.popup {
+  position: absolute;
+
+  background: #fff;
+  bottom: 1em;
+  left: 40%;
+  margin-right: -60%;
+  min-width: 15em;
+  min-height: 5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 3px rgba(0, 0, 0, 0.24);
+  @include roundOffCorners;
+}
+.popup > div {
+  position: absolute;
+  left: 25%;
+  top: 15%;
+}
