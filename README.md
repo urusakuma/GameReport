@@ -9,6 +9,7 @@ https://urusakuma.github.io/GameReport/
 - マークアップ: HTML
 - スタイル: SCSS
 - ライブラリ: jQuery
+- テスト:Jest
 - IDE: VSCode
 ## 主な機能
 - 日記の作成・編集・保存
