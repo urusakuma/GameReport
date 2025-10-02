@@ -4,7 +4,7 @@
 ARG VARIANT="16-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 RUN npm i -g jquery jsdom @types/jquery
-RUN npm i -g @types/lz-string lz-string
+RUN npm i -g lz-string
 RUN npm i -g @types/node
 RUN npm i -g eslint typescript prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin
 RUN npm i -g jest ts-jest @types/jest ts-node
